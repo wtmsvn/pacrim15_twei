@@ -1,2 +1,13 @@
 \section{Simulation}
 
+Simulation:
+In our project our aim is to implement the feature of voice streaming in the already developed application of Two Tall Totems called Think together. In order to implement this feature we have first developed a model architecture of our design where we’ll be using multiple nodes as the leaf nodes in a network. Then we also have some nodes that act as relayers in the network that will transfer the voice stream from the presenter ( super node) in the network to the corresponding leaf nodes in the network. Along with all these nodes we also have a cloud server which will act as a primary storage device for all the voice streams that will transmitted throughout the network. All the nodes will have a direct link to the server so that if any of the leaf nodes (student nodes) wants to retrieve any voice stream they can do so by making a request to the cloud server for that voice stream directly through the relayer (big node). 
+
+
+
+
+
+Now after designing the model architecture , we plan to create a working network by creating a simulation using omnet++ a simulation tool. By creating this simulation we’ll have an idea of how the voice stream packets are being transferred between the different nodes present in the network. Once the simulation starts working for a basic scenario of just 2 leaf nodes, a relayer \& a cloud server, we’ll add more number of nodes to the simulation and then analyse what changes are to be made to certain parameters of the network so as to avoid any kind of latency and disturbance while transferring the voice streams. 
+As a part of future work, we aim to extend this application for people who can download the voice stream from the presentation remotely in real-time. We also aim to use a hierarchical structure for the network which will help the different nodes present in the network to change their roles during the presentation at any time. Once the application is working perfectly for a limited number of users we aim to extend this application in a way so that it can be used for any number of users without having any storage issues, any disruption in the voice streaming or any bandwidth issues in the network by adding large number of users to the presentation. Another thing that we will take care of in the future is that if any of the relayer nodes fails then all the leaf nodes linked to that relayer will be dynamically transferred to another relayer.
+
+
