@@ -1,7 +1,55 @@
 \section{Introduction}
 
+\begin{comment}
 ThinkTogether is a mobile collaboration platform developed by Two Tall Totems, which is also a creative Bring Your Own Device (BYOD) solution. It enables teachers and students to cooperate together through the lecture in a class or presenters and attendees to participate together in a conference. The current implementation of the project on iOS supports the most functionality of the presentation, yet not with voice stream. It is essential to support the voice stream in the application for remote education since students will be able to have a better interaction with the class even if they are not in the classroom. We are going to design and implement a Peer-to-Peer (P2P) based Voice over IP (VoIP) system on the top of the existing application on iOS so that the users not only could actively enjoy the presentation on live but also could store and replay it later on the cloud.
 
 Due to a variety of factors that could affect the quality of service (QoS) for the application, such as limited bandwidth, high volume traffic, network delay and effect of peer signal, we are going to explore and analyze a better solution with optimized performance. This project aims to create a new education model and subvert the traditional way of learning, sharing and communicating with mobile devices through different cutting-edge mobile technology. First of all, we will model a hierarchical architecture, and verify the model as well as the design with a simulation software Omnet++. After that, analysis will be applied to the data collected from the results of the simulation and we are going to discover the bottleneck in our VoIP solution as well as make an improvement.
 
-Therefore, we propose to experiment the method of pushing data among all the devices and ensure the usage of bandwidth that is enough for each user as well as for the cloud server. We are going to implement a stable service based on Voice over IP (VoIP), Peer-to-peer (P2P) or Multi-peer technology, which would also be scalable for large amount users with mobile devices in the existing App. With our partner Two Tall Totems, development on this project with these advanced communication and network technology could greatly change how people think together and help to build a better world.
+Therefore, we propose to experiment the method of pushing data among all the 
+devices and ensure the usage of bandwidth that is enough for each user as well 
+as for the cloud server. We are going to implement a stable service based on 
+Voice over IP (VoIP), Peer-to-peer (P2P) or Multi-peer technology, which would 
+also be scalable for large amount users with mobile devices in the existing App. 
+With our partner Two Tall Totems, development on this project with these 
+advanced communication and network technology could greatly change how people 
+think together and help to build a better world.
+\end{comment}
+
+Collaboration platforms for Computer Supported Collaborative Work (CSCW) enable 
+users to leverage technology to cooperatively develop shared content.   
+Successful platforms now support everything from education to medicine, 
+typically supported through a centralized service or cloud.  Though read-only 
+content distribution has been successfully shared between peers ~\cite{CITATION! 
+Bit torrent?  :) }, mutable content with complex interactions and dependencies 
+has been more difficult to decentralize.   Essentially, the problem is that 
+decentralized approaches require coordination as nodes can come and go, and 
+connections can fail, creating a myriad of different failure modes.
+ 
+In this paper, we overview the design of a Peer-to-Peer (P2P) infrastructure for 
+a CSCW application, ThinkTogether.  ThinkTogether is an iOS prototype for 
+creating and sharing content in almost real-time.  We consider the specific 
+problem of Voice over IP (VoIP), as it is representative of a stream of content 
+that is particularly sensitive to service disruptions.  Our goal is to be able 
+to share all content, including voice, live, but also allow users to replay it 
+later based on access to a shared server or the cloud.   Due to the variety of 
+factors that could affect the quality of service (QoS) for the application, such 
+as limited bandwidth, high volume traffic, network delay and the effects of 
+other peers, we propose a dynamically decentralized approach, in order to 
+optimized performance as conditions in the system change.  We considering this 
+in a case study for an educational platform, which could ultimately subvert the 
+traditional way of learning, sharing and communicating with mobile technology.
+ 
+This paper is organized as follows.  We first present our model of a 
+hierarchical architecture, and provide the verification of the model as well as 
+the design with simulation software Omnet++~\cite{CITATION} (Section 1). We then 
+describe the ways in which the simulation results inform the implementation of 
+the system (Section 2).  In particular, we identify bottlenecks to anticipate in 
+the VoIP educational platform case study.  The analysis underscores the 
+importance to augment the existing prototype with a means of easily distributing 
+data throughout the peers in the system, in a way that provides adequate 
+bandwidth for both the current users and the cloud-based content capture 
+(Section 3).  We generalize this construct, and propose that if we treat the 
+platform as a {\em distributed cloud}, it may be able to address the key 
+challenge---to scale across potentially thousands of mobile devices, all 
+creating and modifying shared content, in a globally distributed system (Section 
+4).  We conclude with an outline of future work (Section 5).
