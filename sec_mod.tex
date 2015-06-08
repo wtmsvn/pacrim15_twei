@@ -1,11 +1,103 @@
-\section{System Modeling}
+\section{Network Scenario and Modeling}
 
-Simulation \& Omnet++:
-Omnet++ is used in the project as a simulation tool to explore the most suitable model and algorithm for ThinkTogether. After investigating potential networking models from above papers, the team will build models in Omnet++, where result data will be collected for analysis. The study done by Varga[16] provides brief introduction of Omnet++, including Model Libraries, NED language, model structure. The paper also describes how to execute the simulation under a powerful graphical user interface, which will help the team to better utilize the tool. Paper done by Anggadjaja, E[17]. features the use of Omnet++ based simulation for reliable point-to-point wireless transmission. The outcome could provide inspiration for employing Peer-to-peer model in wireless network. There are several other papers[18][19] explaining the main infrastructure and internal design of Omnet++. The team can gain overall understanding of the tool, through extensive papers above, and use Omnet++ with efficiency and accuracy. 
+\begin{figure}[h!]  
+  \centering  
+    \includegraphics[width=0.5\textwidth]{figures/model1_test2.jpg}
+  \caption{P2P-based Model for VoIP}
+  %\vspace{-1in}
+  \label{fig:mod1}  
+\end{figure}
+There are four main kinds of components/nodes in the designed scenario, a 
+presenter, multiple relayers and listeners, and a remote cloud server. Each 
+component can coordinate with one another in order pass streaming content such 
+as the voices or camera videos of the speaker, to the listeners in real-time. As 
+showed in Fig.~\ref{fig:mod1}, the network is organized in a hierarchical 
+architecture. The presenter will be producing the streaming content from the 
+root node and broadcast to the relayers and listeners, as well as to 
+the cloud servers for backup. 
 
-Experimental data is the most scientific and objective way of verifying the efficiency of a particular network. There comes the simulation. In the project, two network models will be built in order to observe the behavior of data packets transferred in between. One of networking protocol is Telnet, on which a paper done by J. Postel et al[20] provides specification and standard. This is a relatively old paper that is published in early 1980s. The paper draws a whole picture of telnet protocol from general consideration to signal processing. The team refers to this paper to get a understanding of how telnet protocol is put to use. Another protocol adopted is HTTP. There are wider range of papers dedicated to HTTP. One done by R Fielding[21] provides a full-scaled overview, which is used as a reference for modelling. 
+For example, one can think of the model as a lecture in real life. A presenter 
+is an instructor who gives a lecture at the front of the room, and the 
+listeners are 
+students who are listening to the lecture (can also be remote listening). When 
+a 
+presenter creates a presentation, the voices or videos being recorded will be 
+sent to both the child nodes and the remote cloud server so that the servers can 
+maintain a full copy for the streaming content in the presentation. All the 
+other nodes can passively receive the packets from the presenter.
+%The relayers and cloud server are possible approaches the instructor adopts to 
+%pass on that voice stream. 
+%How well a student understand is not a good 
+%predictor of instructor’s capability; it largely depends on the media, that 
+%is, how well the instructor could transfer his thinking in a explanatory way. 
+%And that is where the cloud and relayers come into play.
+There are different routes a voice packet can travel through. The 
+listeners receive voice packets through the relayers while the cloud server 
+can provide back-up services. If any of the listeners or relayers encounter a 
+data loss due to a bad network condition, the node can send requests to the 
+cloud server and retrieve the missing content. Once a relayer goes down, 
+the listeners will request the voice stream from cloud. The cloud will take 
+over 
+and serve as the main approach to deliver packets. 
+%Noted that only in simple cases where all attendees share the same role do 
+%relayers act as routers. 
+For a more complex scenario, where there are multiple roles for the listeners, 
+relayers act as filter and only forward packets to the designated attendees. 
 
-Multilayer Transmission
+\begin{figure}[h!]  
+  \centering
+      \includegraphics[width=0.5\textwidth]{figures/model2_test2.jpg}
+  \caption{Relayers Become Presenters}
+  \label{fig:mod2}
+\end{figure}
 
-ThinkTogether is a communication application that contains multiple layers in packet transmission. Data sent by each individual is handled differently.  A paper done by G. Sekin et al[22] provides an insight of how to manage multi priority traffic in ATM network. The study object is content-based video objects. As the common characteristics shared between video stream and voice stream, such as low tolerance in delay, jitter and packet misorder, our team could adopt ideas proposed in the paper. Unfortunately, there is no evaluation involved in the paper, therefore the feasibility of proposed algorithm remains unknown. 
+However, this simple hierarchical architecture cannot be adaptable to 
+dynamic network changes and could experience an unbalanced network 
+traffic problem which could seriously reduce the quality of serve and 
+experience. For example, Fig.~\ref{fig:mod2} shows that if a 
+high-level (near to the root) relayer suddenly leaves the network, all the 
+nodes lower than the relayer will not be able to receive the streaming content 
+any more, and thus the server will receive a large quality of requests from the 
+nodes which loss the connection from the presenter. This will cause the server 
+bandwidth to be occupied by these nodes which will make the network flow 
+unbalanced. Also, the relayers among these nodes could lose their advantage in 
+passing the content to the listeners, as the listeners could already obtain the 
+requested packets from the cloud server and bandwidth between the relayers 
+and the listeners is wasted. 
+
+Therefore, our proposed solution is to design a P2P-based 
+architecture among the relayers 
+and listeners. The server could act as the tracker in this scenario. Every node 
+will have to register with the server first when it joins in a presentation so 
+that the server will be aware of the network situation for each node. According 
+to the information the server received from each node (including bandwith, 
+account information based on the future business model, etc.), some nodes will 
+be selected as relayers at different levels, while the other nodes will act as 
+the listeners (leaves) and establish connections with the relayers. The nodes 
+at the same level will be connected as well, to establish the P2P-based 
+architecture, as shown in Fig.~\ref{fig:mod3}.
+
+
+\begin{figure}[h!]  
+  \centering
+      \includegraphics[width=0.5\textwidth]{figures/model3_test2.jpg}
+  \caption{Relayers Become Presenters}
+  \label{fig:mod3}
+\end{figure}
+
+
+\begin{comment}
+Besides, the concept of background channel will be applied for transmitting the 
+data in the background. Apart from the live channel which ensures the client to 
+have the presentation on live, there will also be a background channel to help 
+to upload or download previous missing data that make the data of the 
+presentation synchronized and completed in both server and client side while the 
+clients won’t even notice.
+\end{comment}
+
+
+
+
+
+
 

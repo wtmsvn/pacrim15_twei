@@ -15,19 +15,22 @@ advanced communication and network technology could greatly change how people
 think together and help to build a better world.
 \end{comment}
 
+%background
 Collaboration platforms for Computer Supported Collaborative Work (CSCW) enable 
 users to leverage technology to cooperatively develop shared content.   
 Successful platforms now support everything from education to medicine, 
-typically supported through a centralized service or cloud.  Though read-only 
-content distribution has been successfully shared between peers ~\cite{CITATION! 
-Bit torrent?  :) }, mutable content with complex interactions and dependencies 
-has been more difficult to decentralize.   Essentially, the problem is that 
+typically supported through a centralized service or cloud. Though read-only 
+content distribution has been successfully shared between 
+peers~\cite{XG_P2P_INFO04}, mutable content with complex interactions and 
+dependencies 
+has been more difficult to decentralize. Essentially, the problem is that 
 decentralized approaches require coordination as nodes can come and go, and 
 connections can fail, creating a myriad of different failure modes.
- 
+
+%problem
 In this paper, we overview the design of a Peer-to-Peer (P2P) infrastructure for 
 a CSCW application, ThinkTogether.  ThinkTogether is an iOS prototype for 
-creating and sharing content in almost real-time.  We consider the specific 
+creating and sharing content in almost real-time. We consider the specific 
 problem of Voice over IP (VoIP), as it is representative of a stream of content 
 that is particularly sensitive to service disruptions.  Our goal is to be able 
 to share all content, including voice, live, but also allow users to replay it 
@@ -39,6 +42,25 @@ optimized performance as conditions in the system change.  We considering this
 in a case study for an educational platform, which could ultimately subvert the 
 traditional way of learning, sharing and communicating with mobile technology.
  
+
+%section description
+This paper is organized as follows.  After an overview of related work (Section 
+II), we present our model of a hierarchical architecture, and provide the 
+verification of the model (Section III) as well as the design with simulation 
+software Omnet++~\cite{A_OMNET_ESM01}. We then describe the ways in which 
+the simulation results inform the implementation of the system.  
+In particular, we identify bottlenecks to anticipate in the VoIP educational 
+platform case study. The analysis underscores the importance to augment the 
+existing prototype with a means of easily distributing data throughout the peers 
+in the system, in a way that provides adequate bandwidth for both the current 
+users and the cloud-based content capture (Section IV).  We generalize this 
+construct, and propose that if we treat the platform as a {\em distributed 
+cloud}, it may be able to address the key challenge---to scale across 
+potentially thousands of mobile devices, all creating and modifying shared 
+content, in a globally distributed system (Section V).  We conclude with an 
+outline of future work (Section VI).
+
+\begin{comment}
 This paper is organized as follows.  We first present our model of a 
 hierarchical architecture, and provide the verification of the model as well as 
 the design with simulation software Omnet++~\cite{CITATION} (Section 1). We then 
@@ -53,3 +75,4 @@ platform as a {\em distributed cloud}, it may be able to address the key
 challenge---to scale across potentially thousands of mobile devices, all 
 creating and modifying shared content, in a globally distributed system (Section 
 4).  We conclude with an outline of future work (Section 5).
+\end{comment}
