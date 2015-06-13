@@ -5,8 +5,8 @@ Varga~\cite{A_OMNET_ESM01}
 provides brief introduction of Omnet++, including Model Libraries, NED 
 language, 
 model structure. The paper also describes how to execute the simulation under a 
-powerful graphical user interface, which will help the team to better utilize 
-the tool. Work done by Anggadjaja et al.~\cite{EI_OMNET_ACT10}. features the 
+powerful graphical user interface. Work done by Anggadjaja et 
+al.~\cite{EI_OMNET_ACT10}. features the 
 use of Omnet++ based 
 simulation for reliable point-to-point wireless transmission. The outcome could 
 provide inspiration for employing P2P model in wireless network. There 
@@ -18,17 +18,14 @@ design of Omnet++.
 %extensive papers above, and use Omnet++ with efficiency and accuracy. 
 
 %Experimental data is the most scientific and objective way of verifying the 
-efficiency of a particular network. There comes the simulation. 
-In our work, 
-two network models will be built in order to observe the behavior of data 
-packets transferred in between. One of networking protocol is Telnet, on which 
-J. Postel et al~\cite{JJ_TEL83} provides specification and 
-standard. This is 
-a relatively old paper that is published in early 1980s. The paper draws a 
-whole picture of telnet protocol from general consideration to signal 
-processing. The team refers to this paper to get a understanding of how Telnet 
-protocol is put to use. Another protocol adopted is HTTP. There are wider range 
-of papers dedicated to HTTP. One done by R Fielding~\cite{BJJH_HTTP1999} 
+%efficiency of a particular network. There comes the simulation. 
+In our work, two network models will be built in order to observe the behavior 
+of data packets transferred in between. One of networking protocol is Telnet, on 
+which J. Postel et al~\cite{JJ_TEL83} provides specification and 
+standard. This is a relatively old paper published in early 1980s. The 
+paper draws a whole picture of telnet protocol from general consideration to 
+signal processing. Another protocol adopted is HTTP. There are wider 
+range of papers dedicated to HTTP. One done by R Fielding~\cite{BJJH_HTTP1999} 
 provides a full-scaled overview, which is used as a reference for modelling. 
 
 %Multilayer Transmission
@@ -38,32 +35,28 @@ packet transmission. Data sent by each individual is handled differently. G.
 Sekin et al~\cite{GF_COM00} provides an insight of how to manage multi 
 priority traffic in ATM network. The study is content-based video 
 objects. As the common characteristics shared between video stream and voice 
-stream, such as low tolerance in delay, jitter and packet misorder, our team 
-could adopt ideas proposed in the paper. Unfortunately, there is no evaluation 
-involved in the paper, therefore the feasibility of proposed algorithm remains 
-unknown. 
-
+stream, such as low tolerance in delay, jitter and packet. Unfortunately, there 
+is no evaluation involved in the paper, therefore the feasibility of proposed 
+algorithm remains unknown. 
 
 After designing the model, we plan to create a working 
 network by creating a simulation using Omnet++, as shown in Fig.~\ref{fig:sce}. 
-By creating 
-this simulation we can have an idea of how the voice stream packets are being 
-transferred between the different nodes present in the network. Once the 
-simulation starts working for a basic scenario of just 2 leaf nodes, a relayer 
-\& a cloud server, we will add more number of nodes to the simulation and then 
-analyse what changes are to be made to certain parameters of the network so as 
-to avoid any kind of latency and disturbance while transferring the voice 
-streams. 
+By creating this simulation we can have an idea of how the voice stream packets 
+are being transferred between the different nodes present in the network. Once 
+the simulation starts working for a basic scenario of just 2 leaf nodes, a 
+relayer and a cloud server, we will add more number of nodes to the simulation 
+and then analyse what changes are to be made to certain parameters of the 
+network so as to avoid any kind of latency and disturbance while transferring 
+the voice streams. 
 
 Presenters initialize services by sending voice packets to both relayers and 
-cloud. Upon receiving the packets, the server stores them 
+the cloud. Upon receiving the packets, the server stores them 
 locally and echoes back an acknowledgement. The services between presenter and 
-server is now finished. In other side,
+server is now finished. On the other side,
 voice packets reach the relayer and will be directed to all attendees relayer 
 connects to, which is illustrated by \#6 and \#7 event in Fig.~\ref{fig:r_seq}. 
-Out of 
-testing purpose, each attendees request the exact same voice data from cloud. 
-Cloud handles that request by fetching corresponding data in server and sending 
+Each attendees request the exact same voice data from the cloud. 
+Cloud handles the request by fetching corresponding data in server and sending 
 back the requested content. One can refer to events from \#11 to \#16 for 
 execution sequence details. 
  

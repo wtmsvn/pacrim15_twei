@@ -36,7 +36,10 @@ listeners receive voice packets through the relayers while the cloud server
 can provide back-up services. If any of the listeners or relayers encounter a 
 data loss due to a bad network condition, the node can send requests to the 
 cloud server and retrieve the missing content. Once a relayer goes down, 
-the listeners will request the voice stream from cloud. The cloud will take 
+the listeners will request the voice stream from the cloud. Presumably the 
+relayer will rejoin, and the system will reorganize to optimize in that case.  
+It is presumed that relayers are closer to the listeners, affording better 
+service due to locality and load distribution. The cloud will take 
 over 
 and serve as the main approach to deliver packets. 
 %Noted that only in simple cases where all attendees share the same role do 
@@ -53,7 +56,7 @@ relayers act as filter and only forward packets to the designated attendees.
 
 However, this simple hierarchical architecture cannot be adaptable to 
 dynamic network changes and could experience an unbalanced network 
-traffic problem which could seriously reduce the quality of serve and 
+traffic problem which could seriously reduce the quality of service and 
 experience. For example, Fig.~\ref{fig:mod2} shows that if a 
 high-level (near to the root) relayer suddenly leaves the network, all the 
 nodes lower than the relayer will not be able to receive the streaming content 
@@ -70,7 +73,7 @@ architecture among the relayers
 and listeners. The server could act as the tracker in this scenario. Every node 
 will have to register with the server first when it joins in a presentation so 
 that the server will be aware of the network situation for each node. According 
-to the information the server received from each node (including bandwith, 
+to the information the server receives from each node (including bandwith, 
 account information based on the future business model, etc.), some nodes will 
 be selected as relayers at different levels, while the other nodes will act as 
 the listeners (leaves) and establish connections with the relayers. The nodes 
