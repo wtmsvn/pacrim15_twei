@@ -3,200 +3,196 @@
 \begin{comment}
 Voice over IP (VoIP):
 
-There are various studies that have been done in the field of VoIP (Voice 
-over IP) which is a technology used 
-for voice communication over multimedia devices with the help of the IP 
-protocols. Some of the related work has been done by Wook \& Kang [1] where 
-their main focus is based on VoIP using SIP( Session Initiation Protocol) for 
-smartphones working on iOS, Android \& Windows based OS , In our project we’ll 
-be using a similar technology of VoIP but our focus is on iOS devices i.e. 
-mostly IPAD’s. Similarly there is some other research done by Fathi et al. [2] 
-for the optimization of VoIP services in Wireless networks and how to reduce the 
-disruptions in real-time sessions by focusing on the network layer and not so 
-much on the link layer, In our project we aim to use a similar concept where we 
-aim to reduce delay in voice streaming for live presentations for Wireless 
-devices with a focus on both the network and link layer. Work done by Rao et al. 
-[3] is based on providing VoIP services for GSM based devices without making any 
-modifications in the GSM network, we use a similar concept for providing VoIP 
-services but with a focus on iOS devices instead of GSM devices . 
-There is some work done to improve the VoIP capacity in Wireless networks done 
-by Fong et al. [4], we plan to use a similar concept as presented in the paper 
-[4] to handle voice traffic as with the voice streams during a live presentation 
-there is a chance that the voice traffic might increase and it is very important 
-to handle this traffic in the best possible way to avoid any disruption in voice 
-streaming in real-time. All these studies talk about VoIP applications and how 
+There are various studies that have been done in the field of VoIP (Voice
+over IP) which is a technology used
+for voice communication over multimedia devices with the help of the IP
+protocols. Some of the related work has been done by Wook \& Kang [1] where
+their main focus is based on VoIP using SIP( Session Initiation Protocol) for
+smartphones working on iOS, Android \& Windows based OS , In our project we’ll
+be using a similar technology of VoIP but our focus is on iOS devices i.e.
+mostly IPAD’s. Similarly there is some other research done by Fathi et al. [2]
+for the optimization of VoIP services in Wireless networks and how to reduce the
+disruptions in real-time sessions by focusing on the network layer and not so
+much on the link layer, In our project we aim to use a similar concept where we
+aim to reduce delay in voice streaming for live presentations for Wireless
+devices with a focus on both the network and link layer. Work done by Rao et al.
+[3] is based on providing VoIP services for GSM based devices without making any
+modifications in the GSM network, we use a similar concept for providing VoIP
+services but with a focus on iOS devices instead of GSM devices .
+There is some work done to improve the VoIP capacity in Wireless networks done
+by Fong et al. [4], we plan to use a similar concept as presented in the paper
+[4] to handle voice traffic as with the voice streams during a live presentation
+there is a chance that the voice traffic might increase and it is very important
+to handle this traffic in the best possible way to avoid any disruption in voice
+streaming in real-time. All these studies talk about VoIP applications and how
 to improve the capacity of such systems in Wireless networks.
-Now there some research done for VoIP in mobile devices like: Aggregation of 
-VoIP streams done by Komolafe \& Gardner [5], we focus on using a similar 
-concept but instead of aggregation of calls we are concerned with aggregation of 
+Now there some research done for VoIP in mobile devices like: Aggregation of
+VoIP streams done by Komolafe \& Gardner [5], we focus on using a similar
+concept but instead of aggregation of calls we are concerned with aggregation of
 voice streams.
-The work done by Agarwal et al. [6] is based on energy management of VoIP over 
-Wi-Fi for Smartphones, In our project instead of focusing on Smartphones we 
-focus on iOS devices (IPAD’s) , but we also use a similar concept for energy 
-management of VoIP over the devices and with increasing amount voice streaming 
-over the network the energy of the device needs to be managed in an efficient 
-and environment friendly manner.  Quality Measurement of VoIP over mobile 
-devices by Chen et al. [7] gives some methods to measure the Quality of VoIP 
-over mobile devices, we plan to use a similar concept as voice quality is one 
-the most important aspects in our project, so we need to ensure that voice 
-quality is perfect without any kind of noise or disruption in voice streaming 
-over the network. Performance Measurement of VoIP over the mobile networks by 
-Kim et al. [8] provide some methods to measure the performance of VoIP, we will 
-be using a similar approach as proposed in the paper [8] to measure the 
-performance of VoIP over the mobile networks and by using the results of 
-performance measurement we would analyse the network and try to improve any 
-possible disruption that might cause any kind of delay in streaming voices over 
+The work done by Agarwal et al. [6] is based on energy management of VoIP over
+Wi-Fi for Smartphones, In our project instead of focusing on Smartphones we
+focus on iOS devices (IPAD’s) , but we also use a similar concept for energy
+management of VoIP over the devices and with increasing amount voice streaming
+over the network the energy of the device needs to be managed in an efficient
+and environment friendly manner.  Quality Measurement of VoIP over mobile
+devices by Chen et al. [7] gives some methods to measure the Quality of VoIP
+over mobile devices, we plan to use a similar concept as voice quality is one
+the most important aspects in our project, so we need to ensure that voice
+quality is perfect without any kind of noise or disruption in voice streaming
+over the network. Performance Measurement of VoIP over the mobile networks by
+Kim et al. [8] provide some methods to measure the performance of VoIP, we will
+be using a similar approach as proposed in the paper [8] to measure the
+performance of VoIP over the mobile networks and by using the results of
+performance measurement we would analyse the network and try to improve any
+possible disruption that might cause any kind of delay in streaming voices over
 the network.
-There are some other models where VoIP has been implemented using P2P 
-(Peer-to-peer) like: Improving performance of P2P based VoIP applications by 
-Wang et al. [11] where they analysed the delay in the Chinese internet system. 
-To analyse the delay different methods were used in the paper [11], we aim to 
-use a similar kind of technique to analyse the delay of voice streaming in our 
+There are some other models where VoIP has been implemented using P2P
+(Peer-to-peer) like: Improving performance of P2P based VoIP applications by
+Wang et al. [11] where they analysed the delay in the Chinese internet system.
+To analyse the delay different methods were used in the paper [11], we aim to
+use a similar kind of technique to analyse the delay of voice streaming in our
 application.
 
 
 Skype:
-There are some existing technologies that use the VoIP feature like Skype. Lot 
-of research has been done in this field like, An experimental study on Skype 
-P2P VoIP Systems done by Guha \& Daswani [12] where they study different 
-characteristics of network traffic from data derived from online users in the 
-world, Based on the results obtained in this study we aim to analyse those 
-results and will try to employ a similar approach used in the P2P VoIP 
-technology used in Skype to our own project. Work  done by Hoßfeld \& 
-Binzenhöfer [13] where they analyze the Quality of service (QoS) of the 
-end-to-end connection and the Quality of Experience (QoE) of the end user, we 
-aim to use a similar kind of approach to analyze the QoS \& the QoE of the 
-application ThinkTogether so that if there is any problem in any of these 
-measurements it can be fixed in the best possible way so that we can achieve our 
-goal of implementing voice streaming in the application with the least amount of 
-disturbance while transferring voice over the network. Analysis of the Skype P2P 
-Internet telephony protocol by Baset and Schulzrinne [14] aims at studying the 
-voice quality that has been implemented in Skype and how it is better than other 
-applications that have also implemented a similar feature, In our project we aim 
-to use a similar concept that has been implemented in Skype but our focus is 
-only on the voice part and not the video part that has been implemented in 
+There are some existing technologies that use the VoIP feature like Skype. Lot
+of research has been done in this field like, An experimental study on Skype
+P2P VoIP Systems done by Guha \& Daswani [12] where they study different
+characteristics of network traffic from data derived from online users in the
+world, Based on the results obtained in this study we aim to analyse those
+results and will try to employ a similar approach used in the P2P VoIP
+technology used in Skype to our own project. Work  done by Hoßfeld \&
+Binzenhöfer [13] where they analyze the Quality of service (QoS) of the
+end-to-end connection and the Quality of Experience (QoE) of the end user, we
+aim to use a similar kind of approach to analyze the QoS \& the QoE of the
+application ThinkTogether so that if there is any problem in any of these
+measurements it can be fixed in the best possible way so that we can achieve our
+goal of implementing voice streaming in the application with the least amount of
+disturbance while transferring voice over the network. Analysis of the Skype P2P
+Internet telephony protocol by Baset and Schulzrinne [14] aims at studying the
+voice quality that has been implemented in Skype and how it is better than other
+applications that have also implemented a similar feature, In our project we aim
+to use a similar concept that has been implemented in Skype but our focus is
+only on the voice part and not the video part that has been implemented in
 Skype.
-In our project we'll be using all these technologies and studying some other 
-works that has been  done on them and use those ideas to implement VoIP function 
+In our project we'll be using all these technologies and studying some other
+works that has been  done on them and use those ideas to implement VoIP function
 in ThinkTogether.
 
 
 Peer-to-peer(P2P) \& Client/Server model(C/S):
 
-There are two widely adopted networking model, Peer-to-peer(P2P) and 
-Client-server(CS). Peer-to-peer is a networking mechanism in which each machine 
-acts as server and clients at the same time. The roles are interchangeable 
-simultaneously, dividing the tasks into a set of individual machines. In 
-contrast to Server-Client model in which the supply of resource is separated 
-from the consumption of resource, there is no explicit division in terms of work 
-allocation in peer-to-peer networking. This eliminates the need to establish 
-central hosts or servers for coordination. 
+There are two widely adopted networking model, Peer-to-peer(P2P) and
+Client-server(CS). Peer-to-peer is a networking mechanism in which each machine
+acts as server and clients at the same time. The roles are interchangeable
+simultaneously, dividing the tasks into a set of individual machines. In
+contrast to Server-Client model in which the supply of resource is separated
+from the consumption of resource, there is no explicit division in terms of work
+allocation in peer-to-peer networking. This eliminates the need to establish
+central hosts or servers for coordination.
 
-The concept of Peer-to-peer model used in transferring voice stream from one 
-node to another has been discussed throughout years. Several connection models 
-using P2P protocol have already been proposed to facilitate the communication 
-between multiple handheld devices. A paper[9] done by S.Sundar et al put forward 
-a novel algorithm along with suggested architecture to support voice 
-transmission among mobile phones. Short-distance mobile communication is set up 
-through Bluetooth, which is an integrated facility for most mobile phones 
-nowadays; while long-distance calls are connected through WIFI. The mechanism 
-developed in the paper proceed with the calls using GSM technology if no 
-cost-free networking is accessible. Our primary focus is managing data while 
-connected to network; yet the knowledge using GSM provides insight of future 
-development. Ghassan Kbar et al[10] also dive in  research of similar topic. 
-These two papers concentrate on eliminating costly GSM(Global system for Mobile) 
-telecommunication by exploring other channels such as Bluetooth and WIFI. The 
-work presented in papers relates voice implementation in ThinkTogether app, 
-typically in the first stage - connection. ThinkTogether project absorbs the 
-idea of how to design communication model to be adaptive of current network 
-situation. 
+The concept of Peer-to-peer model used in transferring voice stream from one
+node to another has been discussed throughout years. Several connection models
+using P2P protocol have already been proposed to facilitate the communication
+between multiple handheld devices. A paper[9] done by S.Sundar et al put forward
+a novel algorithm along with suggested architecture to support voice
+transmission among mobile phones. Short-distance mobile communication is set up
+through Bluetooth, which is an integrated facility for most mobile phones
+nowadays; while long-distance calls are connected through WIFI. The mechanism
+developed in the paper proceed with the calls using GSM technology if no
+cost-free networking is accessible. Our primary focus is managing data while
+connected to network; yet the knowledge using GSM provides insight of future
+development. Ghassan Kbar et al[10] also dive in  research of similar topic.
+These two papers concentrate on eliminating costly GSM(Global system for Mobile)
+telecommunication by exploring other channels such as Bluetooth and WIFI. The
+work presented in papers relates voice implementation in ThinkTogether app,
+typically in the first stage - connection. ThinkTogether project absorbs the
+idea of how to design communication model to be adaptive of current network
+situation.
 
-To compare with Peer-to-peer, another networking mechanism:server-client model 
-is also introduced in the project. Each model will be evaluated in terms of 
-performance in voice data transmission. The one with better performance in voice 
-stream will be chosen. The paper proposed by Fobert et al[15] provides a general 
-look into IP telephony in Server/Client Model. It features components included 
-in managing voice data packets. The paper was published in early years when IP 
-telephony was immature, therefore only providing a fundamental principle of 
-transferring voice data over internet in C/S model. However, simulation will 
-built on that knowledge to determine which candidate model, either C/S or P2P, 
+To compare with Peer-to-peer, another networking mechanism:server-client model
+is also introduced in the project. Each model will be evaluated in terms of
+performance in voice data transmission. The one with better performance in voice
+stream will be chosen. The paper proposed by Fobert et al[15] provides a general
+look into IP telephony in Server/Client Model. It features components included
+in managing voice data packets. The paper was published in early years when IP
+telephony was immature, therefore only providing a fundamental principle of
+transferring voice data over internet in C/S model. However, simulation will
+built on that knowledge to determine which candidate model, either C/S or P2P,
 benefits ThinkTogether the most.
 
 \end{comment}
 
 
-Our case study focuses specifically on VoIP (Voice over IP), which is a 
-technology used for voice communication over multimedia devices with the help of 
-the IP protocols. Wook \& Kang \cite{HS_VoIP_ICTC10} focused on VoIP using SIP 
-(Session 
-Initiation 
-Protocol) for smartphones in general, whereas we hope to extend some of these 
-results to iPads.  Fathi et al.~\cite{HSR_VoIP_TVT07} optimized VoIP services 
-in wireless networks 
-and reduced the disruptions in real-time by focusing on the network layer as 
-opposed to the link layer.   In our work we aim to use a similar concept, where 
-we aim to reduce delay in voice streaming for live presentations for wireless 
-devices with a focus on both the network and link layer.  
- 
-There are many studies on VoIP applications and how to improve the capacity of 
-such systems in Wireless networks.  For example, Rao et 
-al.~\cite{HYS_VoIP_COM00} provided VoIP 
-services for GSM (Global System for Mobile) based devices without making any 
-modifications in the GSM network.  Similar work by Fong et 
-al.~\cite{MRSR_VoIP_COM08} focused on 
-Windows.  Approaches like these are great examples of how to handle traffic 
-dynamically, to avoid any disruption in voice streaming in real-time. Komolafe 
-\& Gardner~\cite{OR_VoIP_PMC03} studied aggregation of VoIP calls, whereas we 
-focus on 
-aggregation 
-of voice streams. Agarwal et al. \cite{YRAP_VoIP_MSYS07} consider energy 
-management of VoIP over 
-Wi-Fi for Smartphones, which should be directly applicable to our case study 
-using iPads.  An increase in voice streaming will most definitely require the 
-energy of the device to be managed in an efficient and environmentally friendly 
-manner.   Chen et al. \cite{WPY_VoIP_SYS11} provide methodology to measure the 
-Quality of VoIP 
-over mobile devices, and Kim et al. \cite{DHMS_WiMAX_WOW08} provide metrics for 
-performance of VoIP 
-over the mobile networks, and we intend to leverage these same methodologies in 
-our work.  Related work studying VoIP using P2P design includes Wang et al. 
-\cite{GCXZ_P2PVoIP_MTA13}, where they analyzed the delay in the Chinese internet 
-system, which also 
+Our case study focuses specifically on VoIP (Voice over IP), which is a
+technology used for voice communication over multimedia devices with the help of
+the IP protocols. Wook \& Kang \cite{HS_VoIP_ICTC10} focused on VoIP using SIP
+(Session
+Initiation
+Protocol) for smartphones in general, whereas we hope to extend some of these
+results to iPads.  Fathi et al.~\cite{HSR_VoIP_TVT07} optimized VoIP services
+in wireless networks
+and reduced the disruptions in real-time by focusing on the network layer as
+opposed to the link layer.   In our work we aim to use a similar concept, where
+we aim to reduce delay in voice streaming for live presentations for wireless
+devices with a focus on both the network and link layer.
+
+There are many studies on VoIP applications and how to improve the capacity of
+such systems in Wireless networks.  For example, Rao et
+al.~\cite{HYS_VoIP_COM00} provided VoIP
+services for GSM (Global System for Mobile) based devices without making any
+modifications in the GSM network.  Similar work by Fong et
+al.~\cite{MRSR_VoIP_COM08} focused on
+Windows.  Approaches like these are great examples of how to handle traffic
+dynamically, to avoid any disruption in voice streaming in real-time. Komolafe
+\& Gardner~\cite{OR_VoIP_PMC03} studied aggregation of VoIP calls, whereas we
+focus on aggregation of voice streams. Agarwal et al. \cite{YRAP_VoIP_MSYS07} consider energy
+management of VoIP over Wi-Fi for Smartphones, which should be directly applicable to our case study
+using iPads.  An increase in voice streaming will most definitely require the
+energy of the device to be managed in an efficient and environment-friendly
+manner.   Chen et al. \cite{WPY_VoIP_SYS11} provided a methodology to measure the
+Quality of VoIP
+over mobile devices, and Kim et al. \cite{DHMS_WiMAX_WOW08} provided metrics for
+performance of VoIP
+over the mobile networks, and we intend to leverage these same methodologies in
+our work.  Related work studying VoIP using P2P design includes Wang et al.
+\cite{GCXZ_P2PVoIP_MTA13}, where they analyzed the delay in the Chinese internet
+system, which also
 factors in as an important concern in our case study.
- 
-An experimental study on Skype P2P VoIP Systems by Guha \& Daswani 
-\cite{SN_Skype_CIST05} showed 
-the variety of characteristics of network traffic from data derived from online 
-users in the world.  We hope to leverage these insights in our work, along with 
-the
-work by  Hobfeld \& Binzenh~\cite{TA_Skype_COMPNET08} focusing on the Quality 
-of service (QoS) of the end-to-end connections and the Quality of Experience 
-(QoE) of the end user. A 
-similar analysis of the Skype P2P Internet telephony protocol by Baset and 
-Schulzrinne \cite{SH_Skype_INFO06} establishes the superior voice quality in 
-Skype relative to 
+
+An experimental study on Skype P2P VoIP Systems by Guha \& Daswani
+\cite{SN_Skype_CIST05} showed a variety of characteristics of network traffic from 
+the data derived of online users in the world.  
+We hope to leverage these insights in our work, along with the
+work done by  Hobfeld \& Binzenhofer~\cite{TA_Skype_COMPNET08} focusing on the Quality
+of service (QoS) of the end-to-end connections and the Quality of Experience
+(QoE) of the end user. A
+similar analysis of the Skype P2P Internet telephony protocol by Baset and
+Schulzrinne \cite{SH_Skype_INFO06} establishes the superior voice quality in
+Skype relative to
 other state-of-the-art applications.
- 
-Sundar et al \cite{SMPM_VoIP_ICAESM12} put forward a novel algorithm along with 
-suggested architecture 
-to support P2P voice transmission among mobile phones.  Short-distance mobile 
-communication is set up through Bluetooth, while long-distance calls are 
-connected through Wi-Fi. The mechanism developed uses GSM technology if no 
-costfree networking is accessible. Our primary focus is managing data while 
-connected to network; yet GSM provides insight of future development.  Ghassan 
-Kbar et al \cite{GWA_P2P_VoIP_ICWMC10} also concentrate on eliminating costly 
-GSM telecommunication by 
-exploring other channels such as Bluetooth and Wi-Fi.  Our goal is to extend 
-the 
-voice feature of the ThinkTogether app to be adaptive of current network 
+
+Sundar et al \cite{SMPM_VoIP_ICAESM12} put forward a novel algorithm along with
+suggested architecture
+to support P2P voice transmission among mobile phones.  Short-distance mobile
+communication is set up through Bluetooth, while long-distance calls are
+connected through Wi-Fi. The mechanism developed uses GSM technology if no
+costfree networking is accessible. Our primary focus is managing data while
+connected to the network.  Ghassan
+Kbar et al \cite{GWA_P2P_VoIP_ICWMC10} also concentrate on eliminating costly
+GSM telecommunication by
+exploring other channels such as Bluetooth and Wi-Fi.  Our goal is to extend
+the
+voice feature of the ThinkTogether app to be adaptive of the current network
 situation.
- 
-Fobert et al \cite{JSPS_USPatent05} provides a general look into IP telephony 
-in Server/Client 
-Model managing voice data packets.  The paper was published in early years when 
-IP telephony was immature, therefore only providing a fundamental principle of 
-transferring voice data over the Internet  We use this as a comparison to the 
-proposed P2P architecture in terms of performance in voice data transmission 
+
+Fobert et al \cite{JSPS_USPatent05} provides a general look into IP telephony
+in Server/Client
+Model managing voice data packets.  The paper was published in the early years when
+IP telephony was immature, therefore it only provides a fundamental principle of
+transferring voice data over the Internet. We use this as a comparison to the
+proposed P2P architecture in terms of the performance in voice data transmission
 within the ThinkTogether app.
 
 
