@@ -45,7 +45,7 @@ packet transmission. Data sent by each individual is handled differently. G.
 Sekin et al~\cite{GF_COM00} provides an insight of how to manage multi
 priority traffic in ATM network. The study is content-based video
 objects. As the common characteristics shared between video stream and voice
-stream, such as low tolerance in delay, jitter and packet. Unfortunately, there
+stream, such as low tolerance in delay, jitter and packet loss. Unfortunately, there
 is no evaluation involved in the paper, therefore the feasibility of the proposed
 algorithm remains unknown.
 
@@ -108,16 +108,15 @@ location, such as propagation delay. There are five components in the model:
 presenter, relayer, cloud, server and attendee. Each component coordinates with
 one another in order to offer recording services to attendees. There are two
 test cases, one as a small-scaled network with two attendees, the other as a
-slightly larger-scaled network with ten attendees. The simulation
-is run in HTTP net,
+slightly larger-scaled network with ten attendees. The simulation runs in HTTP net,
 masking the lower level network layers such as TCP and IP.
 
 
 %Model Taxonomy
 
 Figure~\ref{fig:sce} shows the overall picture of the simulation model in a
-small-scaled case. It is broken done in four parts: sender (presenter), receiver (attendees),
-mediator (relayers), and backup (cloud and server).
+small-scaled case. It shows the four main parts in the scenario: the sender (presenter), the receivers (attendees),
+the relayers (mediators), and the cloud server (backup).
 
 \begin{figure}[h!]
   \centering
@@ -180,7 +179,7 @@ the cloud whether the relayers go down or not.
 
 \begin{figure}[h!]
   \centering
-    \includegraphics[width=0.5\textwidth]{figures/r_seq.png}
+    \includegraphics[width=0.45\textwidth]{figures/r_seq.png}
   \caption{Events in Time Sequence}
   \label{fig:r_seq}
   \vspace{-0.2in}
